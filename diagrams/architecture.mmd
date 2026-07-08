@@ -1,0 +1,64 @@
+flowchart LR
+    subgraph Users["User Roles"]
+        Employee["Employee"]
+        HRAdmin["HR Admin"]
+        Superadmin["Superadmin"]
+    end
+
+    subgraph Frontend["React Frontend"]
+        EmployeeChat["Employee Chat Console"]
+        AdminConsole["HR Admin Console"]
+        SuperConsole["Superadmin Console"]
+    end
+
+    subgraph Backend["NestJS Backend"]
+        Auth["Auth and Role Guards"]
+        Chat["Employee Chat Service"]
+        Docs["Documents Service"]
+        Indexing["Document Indexing"]
+        Usage["API Usage and Credits"]
+        Settings["Platform AI Settings"]
+        Realtime["Socket.IO Gateway"]
+        Orgs["Organizations Service"]
+    end
+
+    subgraph Data["Data Layer"]
+        AppDB[("Application Database")]
+        HRIS[("HRIS Database")]
+        Qdrant[("Qdrant Vector Store")]
+    end
+
+    subgraph AI["AI Providers"]
+        OpenAI["OpenAI"]
+        Gemini["Gemini"]
+    end
+
+    Employee --> EmployeeChat
+    HRAdmin --> AdminConsole
+    Superadmin --> SuperConsole
+    EmployeeChat --> Auth
+    AdminConsole --> Auth
+    SuperConsole --> Auth
+    EmployeeChat --> Chat
+    AdminConsole --> Chat
+    AdminConsole --> Docs
+    SuperConsole --> Usage
+    SuperConsole --> Settings
+    SuperConsole --> Orgs
+    EmployeeChat <--> Realtime
+    AdminConsole <--> Realtime
+
+    Chat --> AppDB
+    Docs --> AppDB
+    Usage --> AppDB
+    Settings --> AppDB
+    Orgs --> AppDB
+    Chat --> HRIS
+    Chat --> Qdrant
+    Docs --> Indexing
+    Indexing --> Qdrant
+    Chat --> OpenAI
+    Chat --> Gemini
+    Indexing --> OpenAI
+    Indexing --> Gemini
+

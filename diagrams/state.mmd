@@ -1,0 +1,15 @@
+stateDiagram-v2
+    [*] --> NewSession
+    NewSession --> Active: First employee message
+    Active --> Answered: Assistant answers safely
+    Answered --> Active: Employee asks follow-up
+    Active --> HandoverOffered: Assistant cannot answer safely
+    HandoverOffered --> Active: Employee declines or continues with AI
+    HandoverOffered --> HandoverOpen: Employee accepts
+    HandoverOpen --> HROperating: HR admin replies
+    HROperating --> HandoverOpen: Employee responds
+    HandoverOpen --> Resolved: HR closes or resolves case
+    Active --> Deleted: Employee deletes session
+    Resolved --> [*]
+    Deleted --> [*]
+
