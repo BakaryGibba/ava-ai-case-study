@@ -1,0 +1,19 @@
+flowchart TD
+    Incoming["Incoming Employee Message"] --> Scope["Resolve User and Tenant Scope"]
+    Scope --> Basic{"Basic conversation?"}
+    Basic -->|"Yes"| SmallTalk["Generate brief conversational reply"]
+    Basic -->|"No"| HRISQuestion{"Personal HRIS question?"}
+    HRISQuestion -->|"Yes"| HRIS["Read live HRIS data"]
+    HRISQuestion -->|"No"| HRQuestion{"HR-related question?"}
+    HRQuestion -->|"No"| Boundary["Return out-of-scope boundary"]
+    HRQuestion -->|"Yes"| Retrieve["Retrieve scoped policy context"]
+    Retrieve --> Found{"Useful context found?"}
+    Found -->|"Yes"| Grounded["Generate grounded answer"]
+    Found -->|"No"| Handover["Offer HR handover"]
+    HRIS --> Grounded
+    SmallTalk --> Persist["Persist message and usage where applicable"]
+    Boundary --> Persist
+    Grounded --> Persist
+    Handover --> Persist
+    Persist --> Respond["Return response to UI"]
+

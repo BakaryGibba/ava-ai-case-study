@@ -1,0 +1,24 @@
+sequenceDiagram
+    actor Employee
+    participant UI as Employee Chat UI
+    participant API as NestJS API
+    participant DB as Application DB
+    participant Realtime as Socket.IO
+    participant Admin as HR Admin Console
+
+    Employee->>UI: Asks unresolved or sensitive question
+    UI->>API: Send message
+    API->>DB: Store message
+    API->>API: Determine handover should be offered
+    API->>DB: Mark session as handover offered
+    API->>Realtime: Notify employee and HR admin channels
+    API-->>UI: Return handover offer
+    Employee->>UI: Accepts HR handover
+    UI->>API: Confirm handover
+    API->>DB: Mark session as open handover
+    API->>Realtime: Notify HR admin escalation view
+    Admin->>API: Sends HR reply
+    API->>DB: Store HR message
+    API->>Realtime: Deliver HR reply to employee
+    UI-->>Employee: Shows HR response in same thread
+
