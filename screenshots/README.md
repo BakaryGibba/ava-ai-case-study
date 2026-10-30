@@ -28,7 +28,3 @@ Screenshots should be captured with sanitized demo data only. Do not include rea
 - Capture mobile variants only if showcasing responsive design.
 - Prefer clean demo records over blurred private data.
 - Keep screenshots visually consistent: same theme, same browser zoom, same demo tenant.
-
-## Placeholder Convention
-
-Until real sanitized screenshots are available, documentation pages reference the filenames above and explain what should be captured. This keeps the case study browseable without risking private data exposure.

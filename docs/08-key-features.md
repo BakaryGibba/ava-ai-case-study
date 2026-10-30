@@ -48,9 +48,3 @@ flowchart TD
 | --- | --- |
 | ![Ava AI admin conversations](../screenshots/admin-conversations.png) | ![Ava AI admin documents](../screenshots/admin-documents.png) |
 | HR teams can review assistant conversations and inspect message context. | HR teams can manage the policy documents that ground assistant answers. |
-
-## Remaining Screenshot Placeholder
-
-| File | What To Capture | Why It Matters |
-| --- | --- | --- |
-| `screenshots/admin-employees.png` | Employee directory with demo data | Shows HRIS/local employee visibility |
