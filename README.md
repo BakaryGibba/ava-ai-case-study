@@ -10,7 +10,11 @@
 > [!NOTE]
 > This repository is a portfolio case study. It explains the architecture, engineering decisions, AI workflow, and product reasoning behind Ava AI without exposing proprietary source code, secrets, private HR data, or confidential implementation details.
 
-## Hero Overview
+| Context | Team | Status | My part |
+| --- | --- | --- | --- |
+| AI Engineering Internship, Apping Technology Sdn. Bhd. (2026) | Engineering team | Used by real users | [My contributions →](docs/11-my-contributions.md) |
+
+## Overview
 
 **Ava AI** is an AI-powered HR assistant that helps employees get fast, policy-aware answers about leave, payroll, benefits, claims, workplace conduct, and HR procedures. It combines document-grounded retrieval, HRIS-aware employee context, realtime HR handover, and platform-level usage governance.
 
@@ -161,6 +165,17 @@ Screenshots are captured with sanitized demo data and selected to show the core 
 - Added realtime HR handover so sensitive or unanswered cases can move from AI to human support.
 - Built platform governance through usage tracking, AI credits, request logs, and provider settings.
 
+## Limitations
+
+What this case study does not show, and what the system does not yet do:
+
+- Source code, HR documents and employee data are private, so answer quality is described qualitatively here.
+- There is no automated regression suite for RAG quality and hallucination behaviour yet.
+- Answers do not yet show the exact source excerpt and document link they were grounded in.
+- Policy documents have no versioning or effective dates; stale content relies on the reindex workflow.
+- Bahasa Malaysia and mixed-language answers need further work.
+- Enterprise single sign-on (SSO/SAML/OIDC) is not supported yet.
+
 ## Lessons Learned
 
 > [!IMPORTANT]
@@ -170,4 +185,13 @@ Screenshots are captured with sanitized demo data and selected to show the core 
 - Live HRIS data should be treated as a source of truth for personal facts, not blended casually with policy excerpts.
 - Cost governance belongs in the product architecture, not as an afterthought.
 - Realtime handover makes AI support safer because it gives the system a graceful way to stop.
-- Portfolio documentation is more effective when it explains why decisions were made, not just what was built.
+
+---
+
+<div align="center">
+
+**Part of [Bakary Gibba's AI engineering portfolio](https://github.com/BakaryGibba/bakary-gibba-ai-engineering-portfolio)**
+
+[Portfolio website](https://bakary-gibba.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/bakary-gibba-6409bb248/) · [Google Scholar](https://scholar.google.com/citations?user=bp0G4sgAAAAJ&hl=en)
+
+</div>

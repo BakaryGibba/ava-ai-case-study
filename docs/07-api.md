@@ -44,12 +44,3 @@ flowchart LR
 | AI cost control | Usage checks happen before AI-dependent operations |
 | Realtime UX | Chat-related state changes emit events after persistence |
 | File safety | Document upload is limited to supported HR document formats |
-
-## Screenshot Placeholder
-
-**File:** `screenshots/super-logs.png`
-
-Capture the logs or request activity view with sanitized demo users. This matters because it shows that platform behavior is auditable, not opaque.
-
-> [!NOTE]
-> This screenshot has not been added yet. Keep this placeholder until a sanitized logs view is available.

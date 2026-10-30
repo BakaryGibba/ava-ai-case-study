@@ -37,12 +37,3 @@ flowchart LR
 3. Add observability across retrieval, generation, and handover.
 4. Add document versioning and effective-date filtering.
 5. Add enterprise identity integrations.
-
-## Screenshot Placeholder
-
-**File:** `screenshots/report.png`
-
-Capture a future analytics or reporting view if one is added. It should show aggregate trends only, never private employee conversations.
-
-> [!NOTE]
-> This is intentionally left as a future placeholder because the reporting screenshot is not part of the current captured set.

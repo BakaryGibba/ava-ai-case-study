@@ -2,9 +2,12 @@
 
 # 11 My Contributions
 
+> [!NOTE]
+> Built with the engineering team at Apping Technology Sdn. Bhd. during my AI Engineering internship (2026). This page describes my part of the work.
+
 ## Contribution Summary
 
-This case study frames the work as an end-to-end AI engineering contribution: product reasoning, architecture, backend implementation, frontend UX, AI workflow design, data modeling, and governance.
+My work on Ava AI was end-to-end: product reasoning, architecture, backend implementation, frontend UX, AI workflow design, data modeling, and governance.
 
 ## Contribution Areas
 
@@ -22,7 +25,7 @@ This case study frames the work as an end-to-end AI engineering contribution: pr
 
 The strongest engineering contribution is the system boundary design. Ava AI does not treat the LLM as the product. The product is the workflow around the model: document ingestion, retrieval scope, HRIS data access, role-based review, usage governance, and escalation.
 
-## Evidence Of Senior Engineering Thinking
+## Engineering Judgment
 
 - Separated policy knowledge from live employee facts.
 - Added provider switching without changing feature-level UX.
